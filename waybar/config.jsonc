@@ -1,0 +1,33 @@
+{
+    // Position TOP
+    "layer": "top",
+    "margin-top": 14,
+    "margin-bottom": -10,
+
+    "height" : 16,
+    "spacing": 0,
+
+    // Load Modules
+    "include": ["~/.config/waybar/modules.jsonc"],
+
+    // Modules Left
+    "modules-left": [
+        "custom/cpu",
+        "custom/gpu",
+        "memory"
+    ],
+
+    // Modules Center
+    "modules-center": [
+        "clock",
+        "custom/power_btn"
+    ],
+    
+    // Modules Right
+    "modules-right": [
+        "wlr/taskbar",
+        "pulseaudio",
+        "pulseaudio#mic",
+        "hyprland/language"
+    ],
+}

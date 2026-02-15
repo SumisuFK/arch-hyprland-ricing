@@ -1,0 +1,93 @@
+
+{
+// MODULES-LEFT
+    // CPU
+    "custom/cpu": {
+        "interval": 10,
+        "return-type": "json",
+        "exec": "/home/shingetsu/.config/waybar/scripts/cpu_waybar.sh",
+        "format": "  {}%",
+        "on-click": "kitty --start-as=fullscreen --title htop sh -c 'htop'",
+        "tooltip": true
+    },
+
+    // GPU
+    "custom/gpu": {
+        "return-type": "json",
+        "exec": "/home/shingetsu/.config/waybar/scripts/gpu_waybar.sh",
+        "interval": 2,
+        "format": "󰢮  {}%",
+        "on-click": "kitty --start-as=fullscreen --title htop sh -c 'htop'",
+        "tooltip": true
+    },
+
+    // MEMORY
+    "memory": {
+        "interval": 30,
+        "format": "󰘚 {}%",
+        "tooltip": true,
+        "on-click": "kitty --start-as=fullscreen --title htop sh -c 'htop'",
+        "tooltip-format": "󰍛  Total - {total}GB\nUsed - {used}GB"
+    },
+
+
+// MODULES-CENTER
+    // Clock
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"format-alt": "{:%Y-%m-%d}"
+    },
+    
+    // Power_btn
+    "custom/power_btn": {
+        "format": "⏻",
+        "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+        "tooltip": false
+    },
+
+
+// MODULES-RIGHT
+    // TASKBAR
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 22,
+        "spacing": 8,
+        "all-outputs": true,
+        "tooltip": true,
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "on-click-right": "/home/shingetsu/.config/waybar/scripts/taskbar.sh",
+        "sort-by-app-id": true
+    },
+    
+    // Audio
+    "pulseaudio": {
+        "format": "󰋋  {volume}%",
+        "format-muted": "󰟎  {volume}%",
+        "on-click": "/home/shingetsu/.config/waybar/scripts/volume --toggle",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "/home/shingetsu/.config/waybar/scripts/volume --inc",
+        "on-scroll-down": "/home/shingetsu/.config/waybar/scripts/volume --dec",
+        "scroll-step": 5
+    },
+
+    // Mic Audio
+    "pulseaudio#mic": {
+        "format": "󰍬  {format_source}%",
+        "format-muted": "󰍭  {volume}%",
+        "format-source": "󰍬  {volume}%",
+        "on-click": "/home/shingetsu/.config/waybar/scripts/volume --toggle-mic",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "/home/shingetsu/.config/waybar/scripts/volume --mic-inc",
+        "on-scroll-down": "/home/shingetsu/.config/waybar/scripts/volume --mic-dec",
+        "scroll-step": 5
+    },
+
+    // Language
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "EN",
+        "format-ru": "RU",
+        "on-click": "hyprctl switchxkblayout current next"
+    },
+}
