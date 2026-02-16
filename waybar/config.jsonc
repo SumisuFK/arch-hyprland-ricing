@@ -19,8 +19,10 @@
 
     // Modules Center
     "modules-center": [
+        "custom/lock_screen",
         "clock",
-        "custom/power_btn"
+        "custom/power_btn",
+        "custom/updates"
     ],
     
     // Modules Right

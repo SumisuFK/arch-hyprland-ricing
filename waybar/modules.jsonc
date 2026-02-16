@@ -32,6 +32,13 @@
 
 
 // MODULES-CENTER
+    // Lock screem
+    "custom/lock_screen": {
+        "format": "󰌾",
+        "on-click": "sh -c '(sleep 0.5s; swaylock)' & disown",
+        "tooltip": false
+    },
+
     // Clock
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -43,6 +50,15 @@
         "format": "⏻",
         "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
         "tooltip": false
+    },
+
+    // Updates
+    "custom/updates": {
+        "exec": "/home/shingetsu/.config/waybar/scripts/updates.sh",
+        "interval": 600,
+        "on-click": "/home/shingetsu/.config/waybar/scripts/updates_menu.sh",
+        "format": "{}",
+        "tooltip": true
     },
 
 
@@ -73,9 +89,9 @@
 
     // Mic Audio
     "pulseaudio#mic": {
-        "format": "󰍬  {format_source}%",
-        "format-muted": "󰍭  {volume}%",
-        "format-source": "󰍬  {volume}%",
+        "format": "{format_source}",
+        "format-source-muted": "󰍭 {volume}%",
+        "format-source": "󰍬 {volume}%",
         "on-click": "/home/shingetsu/.config/waybar/scripts/volume --toggle-mic",
         "on-click-right": "pavucontrol",
         "on-scroll-up": "/home/shingetsu/.config/waybar/scripts/volume --mic-inc",

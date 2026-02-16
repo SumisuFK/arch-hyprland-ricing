@@ -9,6 +9,7 @@ cpio
 discord
 efibootmgr
 fastfetch
+ffmpegthumbnailer
 file-roller
 git
 grim
@@ -18,10 +19,12 @@ hyprland
 hyprpaper
 jq
 kitty
+libreoffice-fresh
 linux
 linux-firmware
 linux-headers
 lsof
+mpv
 network-manager-applet
 networkmanager
 nftables
@@ -32,12 +35,14 @@ nvidia-open-dkms
 nvidia-settings
 nvidia-utils
 os-prober
+pacman-contrib
 pamixer
 pavucontrol
 pipewire-alsa
 pipewire-pulse
 playerctl
 polkit-gnome
+protonplus
 proxychains-ng
 qt6-multimedia-ffmpeg
 qt6-virtualkeyboard
@@ -58,6 +63,7 @@ ttf-dejavu
 ttf-jetbrains-mono-nerd
 ttf-liberation
 ttf-roboto
+tumbler
 vim
 waybar
 wayland
@@ -66,6 +72,7 @@ wayvnc
 wireplumber
 wl-clipboard
 xdg-desktop-portal
+xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
 yay
