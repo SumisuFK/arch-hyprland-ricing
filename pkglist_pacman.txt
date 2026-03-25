@@ -535,6 +535,7 @@ lpsolve
 lsb-release
 lsof
 lua
+lua54
 luajit
 lv2
 lxappearance
@@ -545,6 +546,7 @@ mailcap
 make
 md4c
 mesa
+miniupnpc
 minizip
 minizip-ng
 mkinitcpio
@@ -578,6 +580,7 @@ npth
 nspr
 nss
 nss-mdns
+numactl
 nvidia-open-dkms
 nvidia-settings
 nvidia-utils
@@ -651,6 +654,7 @@ python-jaraco.collections
 python-jaraco.context
 python-jaraco.functools
 python-jaraco.text
+python-jinja
 python-mako
 python-markdown
 python-markupsafe
@@ -695,7 +699,6 @@ reflector
 rhash
 ripgrep
 rnnoise
-rofi
 rtkit
 rubberband
 sbc
@@ -731,6 +734,9 @@ startup-notification
 steam
 steam-devices
 sudo
+sunshine-bin-debug
+sunshine-git
+sunshine-git-debug
 svt-av1
 swappy
 swaylock-effects
@@ -784,7 +790,6 @@ wlogout-debug
 wpa_supplicant
 x264
 x265
-xcb-imdkit
 xcb-proto
 xcb-util
 xcb-util-cursor
