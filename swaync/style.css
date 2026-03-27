@@ -1,0 +1,47 @@
+* {
+    font-family: Roboto Medium;
+    font-size: 13px;
+}
+
+.notification {
+    background: #1e1e2e;
+    color: #cdd6f4;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #89b4fa;
+}
+
+.notification-title {
+    font-weight: bold;
+}
+
+.control-center {
+    background: #1e1e2e;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.widget-buttons-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.widget-buttons-grid button {
+    background: #313244;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.widget-mpris {
+    background: #313244;
+    border-radius: 14px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.widget-dnd {
+    margin-bottom: 10px;
+}
