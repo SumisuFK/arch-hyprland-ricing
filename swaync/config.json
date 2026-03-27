@@ -1,0 +1,33 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "control-center-width": 400,
+
+  "widgets": [
+    "buttons-grid",
+    "mpris",
+    "dnd",
+    "notifications"
+  ],
+
+  "widget_config": {
+
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "󰖩",
+          "command": "nm-connection-editor"
+        },
+        {
+          "label": "󰂯",
+          "command": "blueman-manager"
+        }
+      ]
+    },
+    "mpris": {
+      "player": "spotify",
+      "show-cover-art": true,
+      "show-progress": true
+    }
+  }
+}

@@ -632,8 +632,8 @@ ApplicationWindow {
                                 "conf=\"$HOME/.config/hypr/hyprpaper.conf\"; " +
 
                                 "hyprctl hyprpaper preload \"$wall\"; " +
-                                "hyprctl monitors -j | jq -r '.[].name' | while read -r mon; do " +
-                                "hyprctl hyprpaper wallpaper \"$mon,$wall\"; " +
+                                "hyprctl monitors -j | jq -r '.[].description' | while read -r mon; do " +
+                                "hyprctl hyprpaper wallpaper \"desc:$mon,$wall\"; " +
                                 "done; " +
 
                                 "escaped=$(printf '%s\n' \"$wall\" | sed 's/[&/\\\\]/\\\\&/g'); " +
