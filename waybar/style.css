@@ -35,9 +35,10 @@ tooltip label {
 #memory,
 #pulseaudio,
 #custom-updates,
-#custom-lock_screen {
+#custom-lock_screen,
+#custom-notifications {
     margin-bottom: 10px;
-    padding: 6px 10px;
+    padding: 5px 10px;
     border: 2px;
     color: #292929;
     border-radius: 10px;
@@ -72,23 +73,33 @@ tooltip label {
 
         /* MODULES-CENTER  */
 #clock,
-#pulseaudio,
-#custom-lock_screen {
+#custom-lock_screen,
+#custom-notifications {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+}
+
+#custom-notifications {
+    padding-right: 15px;
 }
 
 #clock {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    padding: 7px 10px;
 }
 
-#custom-power_btn {
+#custom-power_btn,
+#custom-lock_screen {
     padding-top: 0;
-    padding-bottom: 3;
+    padding-bottom: 0;
     padding-left: 0;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+}
+
+#custom-lock_screen {
+    padding-right: 5px;
 }
 
 #custom-updates {
