@@ -20,6 +20,9 @@
     background: #1e1e2e;
     border-radius: 16px;
     padding: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    opacity: 0.95;
 }
 
 .widget-buttons-grid {

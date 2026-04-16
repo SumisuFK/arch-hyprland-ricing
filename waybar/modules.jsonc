@@ -75,7 +75,14 @@
         "on-click-right": "/home/shingetsu/.config/waybar/scripts/taskbar.sh",
         "sort-by-app-id": true
     },
-    
+
+    // Notifications
+    "custom/notifications": {
+        "format": "󰂚",
+        "on-click": "swaync-client -t",
+        "tooltip": false
+    },
+
     // Audio
     "pulseaudio": {
         "format": "󰋋  {volume}%",
@@ -105,5 +112,5 @@
         "format-en": "EN",
         "format-ru": "RU",
         "on-click": "hyprctl switchxkblayout current next"
-    },
+    }
 }

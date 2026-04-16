@@ -19,6 +19,7 @@
 
     // Modules Center
     "modules-center": [
+        "custom/notifications",
         "custom/lock_screen",
         "clock",
         "custom/power_btn",
@@ -31,5 +32,5 @@
         "pulseaudio",
         "pulseaudio#mic",
         "hyprland/language"
-    ],
+    ]
 }

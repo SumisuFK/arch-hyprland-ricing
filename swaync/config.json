@@ -21,6 +21,10 @@
         {
           "label": "󰂯",
           "command": "blueman-manager"
+        },
+        {
+          "label": "󰒓",
+          "command": "/home/shingetsu/.config/swaync/scripts/hyprmod_toggle.sh"
         }
       ]
     },
