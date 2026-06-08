@@ -290,7 +290,8 @@ install_oh_my_zsh() {
             err "Не удалось установить Oh My Zsh"
             err "Проверьте интернет, DNS или доступ к raw.gihubusercontent.com"
         fi
-
+        zsh
+        ok "Настройка zsh завершена"
     fi
 }
 
@@ -299,10 +300,10 @@ copy_config_dir() {
     local src="$SCRIPT_DIR/$dir_name"
     local dest="$HOME/.config/$dir_name"
 
-    if [[ -e "src" ]]; then
+    if [[ -e "$src" ]]; then
         info "Копирование конфига $dir_name"
         
-        if [[ -e "$src" ]]; then
+        if [[ -e "$dest" ]]; then
             warn "Удаление старого конфига $dest"
             rm -rf "$dest"
             check_status "Старый конфиг $dir_name удалён" "Не удалось удалить старый конфиг $dir_name"
@@ -359,6 +360,37 @@ copy_pictures() {
     fi
 }
 
+final_summary() {
+    echo
+    echo -e "${GREEN}${BOLD}=====================================${RESET}"
+    echo -e "${GREEN}${BOLD}Установка успешно завершена${RESET}"
+    echo -e "${GREEN}${BOLD}=====================================${RESET}"
+    echo
+}
+
+reboot_system() {
+    local choice
+
+    while true; do
+        echo
+        warn "Для применения всех изменений требуется перезагрузка"
+
+        read -rp "Перезагрузить систему сейчас? [Y/N]: " choice
+        case "$choice" in
+            Y|y)
+                info "Перезагрузка системы..."
+                sudo reboot
+                ;;
+            N|n)
+                echo "Перезагрузка отменена"
+                ;;
+            *)
+                warn "Введите Y или N"
+                ;;
+        esac
+    done
+}
+
 main() {
     # ask_backup
     start_confirmation
@@ -371,11 +403,15 @@ main() {
     enable_services
 
     install_oh_my_zsh
+    
 
     copy_configs
     copy_home_files
     copy_pictures
     ok "Копирование файлов завершено"
+
+    final_summary
+    reboot_system
 }
 
 main "$@"
