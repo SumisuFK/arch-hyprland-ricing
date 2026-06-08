@@ -299,7 +299,7 @@ copy_config_dir() {
     local src="$SCRIPT_DIR/$dir_name"
     local dest="$HOME/.config/$dir_name"
 
-    if [[ -d "src" ]]; then
+    if [[ -e "src" ]]; then
         info "Копирование конфига $dir_name"
         
         if [[ -e "$src" ]]; then
