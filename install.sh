@@ -374,6 +374,7 @@ reboot_system() {
     while true; do
         echo
         warn "Для применения всех изменений требуется перезагрузка"
+        warn "После перезагрузки потребуется вручную настроить монитор в ~/.config/hypr/hyprland.conf"
 
         read -rp "Перезагрузить систему сейчас? [Y/N]: " choice
         case "$choice" in
